@@ -5,6 +5,8 @@ iframe {
 }
 
 figure {
-    height: inherit;
-    display: inline-block;
+    display: block;
+    width: 33%;
+    padding: 10px;
 }
+

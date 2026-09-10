@@ -1,7 +1,11 @@
 .row {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
 }
+
 .wrap {
     flex-wrap: wrap;
 }

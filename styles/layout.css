@@ -1,0 +1,15 @@
+.row {
+    display: flex;
+    width: 100%;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.cols-1 {
+    flex-basis: 8.333%;
+    width: 8.333%;
+}
+.cols-3 {
+    flex-basis: 33.3333%;
+    width: 33.3333%;
+}

@@ -8,7 +8,7 @@
 <body>
 
     <div id="app">
-    <iframe src= "./View/online_store.html"></iframe>
+    <iframe src= "./View/online_store.html" allow="fullscreen"></iframe>
     </div>
 </body>
 </html>

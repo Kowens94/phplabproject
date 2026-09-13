@@ -54,15 +54,13 @@
     <div class="cart-container">
         <h1>Your Cart</h1>
 
-        <!-- Placeholder total (replace with PHP later) -->
         <div class="cart-total">
             Cart Total: $0.00
         </div>
 
-        <!-- Buy button -->
+
         <button class="buy-btn" onclick="goCheckout()">Buy Now</button>
 
-        <!-- Link to checkout page -->
         <div class="checkout-link" onclick="goCheckout()">
             Go to Checkout Page
         </div>
@@ -71,7 +69,6 @@
 
 <script>
     function goCheckout() {
-        // Load checkout.html inside the iframe
         parent.document.getElementById("storeFrame").src = "./View/checkout.html";
     }
 </script>

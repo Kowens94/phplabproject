@@ -1,8 +1,67 @@
+/* ============================
+   Global Layout
+============================ */
+body {
+    margin: 0;
+    background: var(--color-soft-gray);
+}
+
+.ai-c {
+    align-items: center;
+}
+
+/* Page container with header, main, footer rows */
+.container {
+    display: grid;
+    grid-template-rows: var(--header-height) 1fr var(--footer-height);
+    height: 100dvh;
+    overflow: hidden;
+}
+
 h1 {
     text-align: center;
     margin: 20px 0;
+    color: var(--color-dark-slate);
 }
 
+
+/* ============================
+   Product Grid Layout
+============================ */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 20px;
+}
+
+
+/* ============================
+   Header
+============================ */
+.site-header {
+    background: linear-gradient(45deg, var(--color-white), var(--color-soft-gray));
+    border-bottom: 1px solid var(--color-cool-gray);
+    box-shadow: var(--shadow-light);
+    padding: 10px 20px;
+}
+
+
+/* ============================
+   Footer
+============================ */
+.site-footer {
+    background: var(--color-soft-gray);
+    border-top: 1px solid var(--color-cool-gray);
+    padding: 20px;
+    text-align: center;
+    color: var(--color-dark-slate);
+}
+
+
+/* ============================
+   Legacy Flexbox (kept only if needed)
+============================ */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -12,11 +71,4 @@ h1 {
 .wrap {
     flex-wrap: wrap;
 }
-.cols-1 {
-    flex-basis: 8.333%;
-    width: 8.333%;
-}
-.cols-3 {
-    flex-basis: 33.3333%;
-    width: 33.3333%;
-}
+

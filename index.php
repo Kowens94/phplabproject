@@ -4,29 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riyah Music Store</title>
+
+    <!-- Unified Styles -->
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
+
 <body>
+    <div class="container">
 
-    <div id="app">
-        <h1>Riyah's Music Wholesale</h1>
+        <!-- Header -->
+        <header class="site-header">
+            <?php include("./views/header.php"); ?>
+        </header>
 
-        
-        <button class="cart-btn" onclick="goCart()">View Cart</button>
+        <!-- Main Content -->
+        <main class="site-main">
+            <?php
+                // Determine which page to load
+                $page = $_GET['page'] ?? 'store';
 
-       
-        <iframe id="storeFrame"
-                src="./View/online_store.html"
-                style="height: calc(100vh - 120px); width: 100%; margin-top: 20px;">
-        </iframe>
+                switch ($page) {
+                    case 'cart':
+                        include("./views/cart.php");
+                        break;
+
+                    case 'checkout':
+                        include("./views/checkout.php");
+                        break;
+
+                    case 'purchase_complete':
+                        include('./views/purchase_complete.php');
+                        break;
+
+                    default:
+                        include("./views/online_store.php");
+                        break;
+                }
+            ?>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <?php include("./views/footer.php"); ?>
+        </footer>
+
     </div>
-
-    <script>
-        function goCart() {
-            document.getElementById("storeFrame").src = "./View/cart.html";
-        }
-    </script>
-
 </body>
 </html>

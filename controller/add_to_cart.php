@@ -2,7 +2,8 @@
 require("mysqli_connect.php");
 
 if (!isset($_POST['product_id']) || !isset($_POST['qty'])) {
-    exit("Invalid request");
+    echo json_encode(["status" => "error", "message" => "Invalid request"]);
+    exit;
 }
 
 $product_id = $_POST['product_id'];
@@ -16,7 +17,8 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows === 0) {
-    exit("Product not found");
+    echo json_encode(["status" => "error", "message" => "Product not found"]);
+    exit;
 }
 
 $product = $result->fetch_assoc();
@@ -49,6 +51,7 @@ if ($existing->num_rows > 0) {
     $insert->execute();
 }
 
-header("Location: ../index.php?page=cart");
+// AJAX response
+echo json_encode(["status" => "success", "message" => "Item added to cart"]);
 exit;
 ?>

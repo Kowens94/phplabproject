@@ -1,7 +1,8 @@
+<link rel="stylesheet" href="./styles/layout.css">
 <ul class="menu">
     <li onclick="goHome()">home</li>
     <li onclick="goCart()">cart</li>
-    <li onclick="goCheckout()">checkout</li>
+    <!-- <li onclick="goCheckout()">checkout</li> -->
 </ul>
 
 <script>
@@ -13,7 +14,7 @@
         window.location.href = "./index.php?page=cart";
     }
 
-    function goCheckout() {
+    /*function goCheckout() {
         window.location.href = "./index.php?page=checkout";
-    }
+    } */
 </script>

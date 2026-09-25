@@ -1,3 +1,6 @@
+<?php
+    include("./controller/mysqli_connect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +25,8 @@
         <!-- Main Content -->
         <main class="site-main">
             <?php
+
+                
                 // Determine which page to load
                 $page = $_GET['page'] ?? 'store';
 

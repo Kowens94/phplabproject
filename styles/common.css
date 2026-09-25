@@ -1,6 +1,4 @@
-/* ============================
-   Color Variables (Palette C)
-============================ */
+/* Modern Color Pallete */
 :root {
     --color-white: #FFFFFF;
     --color-soft-gray: #F2F2F2;
@@ -15,9 +13,7 @@
     --shadow-medium: 0px 4px 12px rgba(0,0,0,0.12);
 }
 
-/* ============================
-   Global Reset
-============================ */
+/* Global Reset */
 html, body {
     height: 100%;
     margin: 0;
@@ -27,9 +23,7 @@ html, body {
 }
 
 
-/* ============================
-   Buttons (Unified)
-============================ */
+/* Buttons */
 .add-btn,
 .buy-btn,
 .cart-btn,
@@ -58,9 +52,7 @@ html, body {
 }
 
 
-/* ============================
-   Cart + Checkout Containers
-============================ */
+/* Cart + Checkout Containers*/
 .cart-container,
 .checkout-container {
     background: var(--color-white);
@@ -71,9 +63,7 @@ html, body {
 }
 
 
-/* ============================
-   Product Card Component
-============================ */
+/*  Product Card Component */
 .p-card {
     background: var(--color-white);
     border: 1px solid var(--color-cool-gray);
@@ -119,9 +109,7 @@ html, body {
 }
 
 
-/* ============================
-   Purchase Row
-============================ */
+/* Purchase Row*/
 .purchase-row {
     display: flex;
     justify-content: space-between;
@@ -137,9 +125,7 @@ html, body {
 }
 
 
-/* ============================
-   Utility Classes
-============================ */
+/* Utility Classes */
 .pa-1 { padding: 4px; }
 .pa-2 { padding: 8px; }
 .pa-4 { padding: 16px; }

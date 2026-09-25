@@ -1,10 +1,9 @@
 <?php
-require("mysqli_connect.php");
+require __DIR__ . "/mysqli_connect.php";
 
-// Clear the cart
 $sql = "DELETE FROM shopping_cart";
 $conn->query($sql);
 
-// Redirect to purchase complete page
-header("Location: ../index.php?page=purchase_complete");
+// Redirect back to cart page
+header("Location: /phplabproject/index.php?page=cart");
 exit;

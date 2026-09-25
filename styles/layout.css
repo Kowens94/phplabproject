@@ -1,21 +1,58 @@
-/* ============================
-   Global Layout
-============================ */
+
+.ai-c {
+    align-items: center;
+}
+
+
 body {
     margin: 0;
     background: var(--color-soft-gray);
 }
 
-.ai-c {
-    align-items: center;
+
+.cart-indicator {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-dark-slate);
+    padding: 10px 20px;
 }
+.cart-item {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.cart-item form {
+    margin-top: 15px;
+    display: block;
+}
+
+.cart-summary {
+    margin-top: 30px;
+}
+
+
+.checkout-btn, .catalog-btn, .clear-cart-btn {
+    background: #2a7ae2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover, .catalog-btn:hover {
+    background: #1f5fb8;
+}
+
 
 /* Page container with header, main, footer rows */
 .container {
     display: grid;
     grid-template-rows: var(--header-height) 1fr var(--footer-height);
     height: 100dvh;
-    overflow: hidden;
+    overflow: visible;
 }
 
 h1 {
@@ -25,9 +62,7 @@ h1 {
 }
 
 
-/* ============================
-   Product Grid Layout
-============================ */
+/* Product Grid Layout */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -36,9 +71,48 @@ h1 {
 }
 
 
-/* ============================
-   Header
-============================ */
+
+/* Toast Notification */
+
+
+.qty-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    background: var(--color-dark-slate);
+    color: var(--color-white);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.qty-display {
+    min-width: 24px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* Old Flexbox */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.remove-btn {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Header */
 .site-header {
     background: linear-gradient(45deg, var(--color-white), var(--color-soft-gray));
     border-bottom: 1px solid var(--color-cool-gray);
@@ -47,9 +121,7 @@ h1 {
 }
 
 
-/* ============================
-   Footer
-============================ */
+/* Footer */
 .site-footer {
     background: var(--color-soft-gray);
     border-top: 1px solid var(--color-cool-gray);
@@ -58,14 +130,25 @@ h1 {
     color: var(--color-dark-slate);
 }
 
+.summary-line {
+    margin: 8px 0;
+}
 
-/* ============================
-   Legacy Flexbox (kept only if needed)
-============================ */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
+/* Toast Notification */
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--color-dark-slate);
+    color: var(--color-white);
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 9999;
 }
 
 .wrap {

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./styles/layout.css">
 <div class="checkout-container">
     <h1>Purchase Complete</h1>
 
@@ -7,6 +8,5 @@
 
     <div class="complete-actions">
         <a href="index.php?page=store" class="btn">Continue Shopping</a>
-        <a href="index.php?page=cart" class="btn">View Cart</a>
     </div>
 </div>

@@ -3,9 +3,7 @@
     --header-height: 96px;
 }
 
-/* ============================
-   Cart Container
-============================ */
+/* Cart Container */
 .cart-container {
     padding: 30px;
     max-width: 600px;
@@ -38,9 +36,7 @@ figure {
     margin: 0;
 }
 
-/* ============================
-   Header
-============================ */
+/* Header */
 header {
     background: linear-gradient(45deg, var(--color-white), var(--color-soft-gray));
     color: var(--color-dark-slate);
@@ -78,9 +74,9 @@ header {
     height: calc(var(--header-height) * 0.8);
 }
 
-/* ============================
+/*
    Footer
-============================ */
+ */
 footer {
     background: var(--color-soft-gray);
     color: var(--color-dark-slate);
@@ -92,16 +88,16 @@ footer {
     align-items: center;
 }
 
-/* ============================
+/* 
    Main Scroll Area
-============================ */
+*/
 main {
     overflow: auto;
 }
 
-/* ============================
+/* 
    Menu
-============================ */
+ */
 .menu {
     display: flex;
     gap: 20px;
@@ -120,9 +116,7 @@ main {
     color: var(--color-indigo);
 }
 
-/* ============================
-   Product Card Components
-============================ */
+/* Product Card Components */
 .p-card {
     background: var(--color-white);
     border: 1px solid var(--color-cool-gray);
